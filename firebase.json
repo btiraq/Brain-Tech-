@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "site": "braintech",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "README.md",
+      "node_modules/**",
+      "**/.*"
+    ],
+    "rewrites": [
+      {
+        "source": "/admin",
+        "destination": "/admin.html"
+      }
+    ]
+  }
+}

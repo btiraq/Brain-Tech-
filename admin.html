@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BRAIN TECH Admin</title>
+    <meta name="description" content="لوحة تحكم المشرفين لـ Brain Tech">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="admin.js" defer></script>
+</head>
+<body>
+    <div class="admin-panel" style="padding: 80px 40px; max-width: 980px; margin: 0 auto;">
+        <header style="text-align:center; margin-bottom: 40px;">
+            <a href="index.html" class="nav-logo" style="font-size:2rem;">BRAIN<span>TECH</span></a>
+            <h1 style="margin-top: 20px; font-family: 'Orbitron', monospace; font-size: clamp(2rem,4vw,3rem);">لوحة المشرف</h1>
+            <p style="color: var(--gray); margin-top: 12px;">صفحة إدارة آمنة للوصول الخاص فقط.</p>
+        </header>
+        <section id="authSection" style="background: rgba(10,10,18,0.9); border: 1px solid rgba(0,194,209,0.12); border-radius: 24px; padding: 30px;">
+            <div id="authPanel">
+                <h2 style="font-family: 'Orbitron', monospace; color: var(--cyan); margin-bottom: 18px;">تسجيل الدخول</h2>
+                <form id="adminLogin" style="display:grid; gap:18px;">
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input id="adminEmail" type="email" placeholder="admin@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input id="adminPassword" type="password" placeholder="••••••••" required>
+                    </div>
+                    <button class="btn-primary" type="submit">تسجيل الدخول</button>
+                    <div id="authStatus" class="status-message"></div>
+                </form>
+            </div>
+            <div id="adminDashboard" class="hidden" style="margin-top: 30px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+                    <h2 style="font-family: 'Orbitron', monospace; color: var(--cyan); margin-bottom: 0;">لوحة تحكم المشرف</h2>
+                    <button id="signOutBtn" class="btn-outline">تسجيل الخروج</button>
+                </div>
+                <div id="adminContent" style="margin-top: 24px; color: var(--text);"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

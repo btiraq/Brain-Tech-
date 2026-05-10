@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BRAIN TECH | حلول هندسية احترافية</title>
+    <meta name="description" content="BRAIN TECH: تصميم وتنفيذ المشاريع الهندسية الجامعية في العراق">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- GLOBAL PARTICLES -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- LOADER -->
+<div id="loader">
+    <canvas id="loader-canvas"></canvas>
+    <div class="loader-text">BRAIN TECH</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+    <a href="#" class="nav-logo">BRAIN<span>TECH</span></a>
+    <ul class="nav-links">
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#process">منهجيتنا</a></li>
+        <li><a href="#contact">تواصل</a></li>
+    </ul>
+    <button class="lang-btn" id="langBtn">EN</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+        <div class="hero-eyebrow">// ENGINEERING THE FUTURE</div>
+        <h1 class="hero-title glitch" data-text="نهندس مشروعك">
+            <span class="line1">We Engineer</span>
+            <span class="line2">Your Project</span>
+        </h1>
+        <p class="hero-sub" id="hero-sub">تصميم وتنفيذ المشاريع الهندسية الجامعية باحترافية عالمية — PCB، AI، Embedded Systems والمزيد</p>
+        <div class="hero-btns">
+            <button class="btn-primary" id="startBtn">ابدأ مشروعك <i class="fas fa-arrow-left" style="margin-right:8px"></i></button>
+            <button class="btn-outline" id="scrollToProjects">استعرض المشاريع</button>
+        </div>
+    </div>
+    <div class="scroll-hint">
+        <span>SCROLL</span>
+        <div class="line"></div>
+    </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+    <div class="stat-item reveal">
+        <span class="stat-num"><span class="count-up" data-target="120">0</span>+</span>
+        <span class="stat-label">مشروع منجز</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+        <span class="stat-num"><span class="count-up" data-target="98">0</span>%</span>
+        <span class="stat-label">رضا العملاء</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-num"><span class="count-up" data-target="5">0</span></span>
+        <span class="stat-label">تخصصات هندسية</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+        <span class="stat-num"><span class="count-up" data-target="3">0</span>+</span>
+        <span class="stat-label">سنوات خبرة</span>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" style="max-width:1280px;margin:0 auto">
+    <div class="services-header reveal">
+        <span class="section-tag">// ما نقدمه</span>
+        <h2 class="section-title"><span class="accent">خدماتنا</span></h2>
+        <p class="section-sub">حلول متكاملة للهندسة الإلكترونية والأنظمة الذكية مع توثيق كامل</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon"><i class="fas fa-microchip"></i></div>
+            <h3>PCB Design</h3>
+            <p>تصميم دوائر مطبوعة احترافية باستخدام Altium وKiCad</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><i class="fas fa-robot"></i></div>
+            <h3>Arduino Projects</h3>
+            <p>أنظمة أردوينو متكاملة مع برمجة وتوثيق شامل</p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+            <div class="service-icon"><i class="fab fa-python"></i></div>
+            <h3>Raspberry Pi</h3>
+            <p>حلول Raspberry Pi المتقدمة للمشاريع الذكية</p>
+        </div>
+        <div class="service-card reveal reveal-delay-4">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI Vision Systems</h3>
+            <p>رؤية حاسوبية وذكاء اصطناعي باستخدام OpenCV وTensorFlow</p>
+        </div>
+        <div class="service-card reveal">
+            <div class="service-icon"><i class="fas fa-memory"></i></div>
+            <h3>Embedded Solutions</h3>
+            <p>أنظمة مدمجة STM32, ESP32, FPGA</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="max-width:1280px;margin:0 auto">
+    <div class="projects-header reveal">
+        <span class="section-tag">// معرض الأعمال</span>
+        <h2 class="section-title">أحدث <span class="accent">المشاريع</span></h2>
+        <p class="section-sub">نماذج من مشاريعنا المنفذة بالكامل مع توثيق وشرح</p>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="max-width:1280px;margin:0 auto">
+    <div class="process-header reveal">
+        <span class="section-tag">// كيف نعمل</span>
+        <h2 class="section-title">منهجية <span class="accent">العمل</span></h2>
+        <p class="section-sub">خطوات واضحة من الفكرة إلى التسليم النهائي</p>
+    </div>
+    <div class="process-track">
+        <div class="process-step reveal reveal-delay-1">
+            <div class="step-num">01</div>
+            <div class="step-title">فكرة المشروع</div>
+            <div class="step-desc">تحليل المتطلبات والجدوى</div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+            <div class="step-num">02</div>
+            <div class="step-title">التصميم</div>
+            <div class="step-desc">Schematics & PCB Layout</div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+            <div class="step-num">03</div>
+            <div class="step-title">التنفيذ</div>
+            <div class="step-desc">برمجة وتجميع المكونات</div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+            <div class="step-num">04</div>
+            <div class="step-title">الاختبار</div>
+            <div class="step-desc">فحص شامل ومعايرة</div>
+        </div>
+        <div class="process-step reveal" style="transition-delay:0.5s">
+            <div class="step-num">05</div>
+            <div class="step-title">التسليم</div>
+            <div class="step-desc">توثيق كامل + شرح</div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" style="max-width:1280px;margin:0 auto">
+    <div class="why-grid">
+        <div>
+            <span class="section-tag reveal">// لماذا نحن</span>
+            <h2 class="section-title reveal">لماذا تختار <span class="accent">Brain Tech</span>؟</h2>
+            <ul class="why-list">
+                <li class="why-item reveal reveal-delay-1">
+                    <div class="why-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="why-text"><h4>PCB نظيف احترافي</h4><p>لا أسلاك عشوائية — منتج جاهز للعرض الجامعي</p></div>
+                </li>
+                <li class="why-item reveal reveal-delay-2">
+                    <div class="why-icon"><i class="fas fa-clock"></i></div>
+                    <div class="why-text"><h4>تسليم في الوقت المحدد</h4><p>التزام تام بالمواعيد مع متابعة مستمرة</p></div>
+                </li>
+                <li class="why-item reveal reveal-delay-3">
+                    <div class="why-icon"><i class="fas fa-file-code"></i></div>
+                    <div class="why-text"><h4>توثيق وشرح كامل</h4><p>تقارير تقنية + فيديوهات تعليمية شاملة</p></div>
+                </li>
+                <li class="why-item reveal reveal-delay-4">
+                    <div class="why-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="why-text"><h4>معايير عالمية</h4><p>جودة تنافس أفضل المنتجات الهندسية الدولية</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="reveal" id="why-canvas-wrap">
+            <canvas id="why-canvas"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="max-width:1280px;margin:0 auto">
+    <div style="text-align:center" class="reveal">
+        <span class="section-tag">// آراء العملاء</span>
+        <h2 class="section-title">ماذا يقولون <span class="accent">عنا</span></h2>
+    </div>
+    <div class="test-grid">
+        <div class="test-card reveal reveal-delay-1">
+            <div class="stars">★★★★★</div>
+            <p class="test-text">"سلموني مشروع متكامل مع توثيق شامل، جودة PCB ممتازة. النتيجة فاقت توقعاتي بمراحل، أنصح بالتعامل معهم بقوة."</p>
+            <div class="test-author">أحمد الخفاجي</div>
+            <div class="test-role">كلية الهندسة — جامعة بغداد</div>
+        </div>
+        <div class="test-card reveal reveal-delay-2">
+            <div class="stars">★★★★★</div>
+            <p class="test-text">"نظام AI Vision كان متطوراً ويتضمن شرح وبرمجة كاملة. تعاملت معهم مرتين ودائماً نتيجة احترافية بامتياز."</p>
+            <div class="test-author">سارة محمد</div>
+            <div class="test-role">الجامعة التكنولوجية — بغداد</div>
+        </div>
+        <div class="test-card reveal reveal-delay-3">
+            <div class="stars">★★★★★</div>
+            <p class="test-text">"تصميم PCB كان نظيفاً جداً والكود مشروح ومنظم. حصلت على أعلى الدرجات في مشروع التخرج بفضل عملهم الرائع."</p>
+            <div class="test-author">علي الحسيني</div>
+            <div class="test-role">كلية الهندسة الكهربائية — الموصل</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="max-width:1280px;margin:0 auto">
+    <div class="reveal" style="margin-bottom:50px">
+        <span class="section-tag">// ابدأ الآن</span>
+        <h2 class="section-title">تواصل <span class="accent">معنا</span></h2>
+        <p class="section-sub">أرسل تفاصيل مشروعك وسنتواصل معك خلال 24 ساعة</p>
+    </div>
+    <div class="contact-wrapper">
+        <form id="contactForm" class="reveal" onsubmit="handleForm(event)">
+            <div class="form-group">
+                <label>الاسم الكامل</label>
+                <input id="f-name" type="text" placeholder="محمد أحمد" required>
+            </div>
+            <div class="form-group">
+                <label>رقم الهاتف</label>
+                <input id="f-phone" type="tel" placeholder="+964 77 1234 5678" required>
+            </div>
+            <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input id="f-email" type="email" placeholder="email@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>نوع المشروع</label>
+                <select id="f-project">
+                    <option>PCB Design</option>
+                    <option>Arduino / Embedded</option>
+                    <option>Raspberry Pi</option>
+                    <option>AI Vision System</option>
+                    <option>مشروع تخرج كامل</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>تفاصيل المشروع</label>
+                <textarea id="f-message" placeholder="اشرح فكرة مشروعك..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px">
+                <i class="fas fa-paper-plane"></i>
+                <span id="submitText">إرسال الطلب</span>
+            </button>
+            <div id="formStatus" style="display:none;margin-top:16px;padding:14px 18px;border-radius:12px;font-size:0.95rem;text-align:center;font-weight:600"></div>
+        </form>
+        <div class="contact-info reveal reveal-delay-2">
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-text"><span>الموقع</span><strong>العراق — بغداد</strong></div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="info-text"><span>البريد الإلكتروني</span><strong>braintechpg@gmail.com</strong></div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="info-text"><span>واتساب</span><strong>+964 7877665444</strong></div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                <div class="info-text"><span>ساعات العمل</span><strong>٩ صباحاً — ١٠ مساءً</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BANNER -->
+<div id="cta" style="padding:80px 40px;text-align:center;position:relative;overflow:hidden">
+    <canvas id="cta-canvas"></canvas>
+    <div class="inner">
+        <span class="section-tag" style="display:block;margin-bottom:16px">// لا تتأخر</span>
+        <h2 style="font-family:'Orbitron',monospace;font-size:clamp(1.8rem,4vw,3rem);font-weight:900;margin-bottom:16px">جاهز تبدأ مشروعك؟</h2>
+        <p style="color:var(--gray);margin-bottom:32px;font-size:1.05rem">تواصل معنا الآن وسنحول فكرتك إلى مشروع هندسي احترافي</p>
+        <button class="btn-primary" onclick="alert('📞 واتساب: +964 7877665444\n📧 braintechpg@gmail.com')">تواصل معنا الآن</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="logo-text">BRAIN<span>TECH</span></div>
+            <p>نهندس مشاريعك الجامعية باحترافية عالمية. من الفكرة إلى التسليم النهائي.</p>
+            <div class="socials">
+                <a class="social-btn" href="https://www.instagram.com/btiraq/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a class="social-btn" href="#" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>الخدمات</h4>
+            <ul>
+                <li><a href="#services">PCB Design</a></li>
+                <li><a href="#services">Arduino Projects</a></li>
+                <li><a href="#services">AI Vision</a></li>
+                <li><a href="#services">Embedded Systems</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>روابط</h4>
+            <ul>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#process">منهجية العمل</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>تواصل</h4>
+            <ul>
+                <li><a href="mailto:braintechpg@gmail.com">braintechpg@gmail.com</a></li>
+                <li><a href="tel:+9647877665444">+964 7877665444</a></li>
+                <li><a href="#">بغداد، العراق</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2025 BRAIN TECH — جميع الحقوق محفوظة</span>
+        <span style="font-family:'Orbitron',monospace;font-size:0.7rem;color:rgba(0,194,209,0.4)">ENGINEERING THE FUTURE</span>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+        <div class="modal-icon"><i class="fas fa-microchip"></i></div>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-desc" id="modalDesc"></div>
+        <div class="modal-tags" id="modalTags"></div>
+        <button class="modal-btn" onclick="alert('📞 واتساب: +964 7877665444\n📧 braintechpg@gmail.com')">اطلب هذا المشروع</button>
+    </div>
+</div>
+
+</body>
+</html>
